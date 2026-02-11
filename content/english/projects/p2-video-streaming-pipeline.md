@@ -20,7 +20,7 @@ tags = ["python", "data", "pipeline", "dbt", "airflow", "docker", "postgresql", 
 
 ![Project Architecture Diagram](/project_images/p2-streaming/etl-pipeline-diagram.jpg)
 
-### *You can find the code for this project in [GitHub]().*
+### *You can find the code for this project in [GitHub](https://github.com/Frank3040/Video-Streaming-Pipeline.git).*
 
 ## Project Overview
 
