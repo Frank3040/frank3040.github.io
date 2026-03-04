@@ -1,5 +1,5 @@
 +++
-title = "Desarrollo de un Data Warehouse (DW) para el dataset de NY Yellow Taxi Trips"
+title = "Data Warehouse (DW) para el dataset de NY Yellow Taxi Trips"
 date = 2025-10-21
 description = "Este proyecto presenta el diseño e implementación de un Almacén de Datos (DW) en Google Cloud Platform (GCP) utilizando BigQuery y un Dashboard usando Looker Studio. Esto con el objetivo de analizar patrones de movilidad urbana utilizando datos de viajes en taxi de la ciudad de Nueva York."
 tags = ["Data", "Pipeline", "GCP", "BigQuery", "Data Warehousing", "Looker Studio"]
