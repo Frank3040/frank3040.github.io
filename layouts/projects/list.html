@@ -14,8 +14,9 @@
     {{ .Content }}
 
     <!-- Changed from simple <ul> to styled list -->
+    {{ $paginator := .Paginate .Pages 4 }}
     <ul class="projects-list">
-        {{ range .Paginator.Pages }}
+        {{ range $paginator.Pages }}
         <li class="project-item">
             <a class="project-title" href="{{ .Params.externalLink | default .RelPermalink }}">
                 {{ .Title }}
