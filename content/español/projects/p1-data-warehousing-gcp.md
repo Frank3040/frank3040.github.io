@@ -40,7 +40,7 @@ El Data Warehouse fue diseñado siguiendo el enfoque de **esquema en estrella** 
 
 Este modelo permite análisis multidimensional por tiempo, ubicación, tipo de pago y proveedor, proporcionando valiosos conocimientos sobre el comportamiento del transporte urbano.
 
-![Star schema representation showing fact and dimension relationships.](/project_images/pj-2-gcp-dw.png)
+![Star schema representation showing fact and dimension relationships.](/project_images/p1-gcp-bigquery/p1-1.png)
 
 *Figura 1. Representación del esquema estrella que muestra las relaciones entre hechos y dimensiones.*
 
@@ -63,7 +63,7 @@ Usando **Looker Studio** conectado a **BigQuery**, se desarrolló un dashboard i
 
 Debajo hay una captura de pantalla del dashboard, para que te puedas dar una idea de las gráficas que contiene.
 
-![Dashboard screenshot](/project_images/ny-dashboard.png)
+![Dashboard screenshot](/project_images/p1-gcp-bigquery/p1-2.png)
 *Figura 2. Dashboard interactivo para analizar los patrones operativos y de movilidad de los servicios de taxi de NYC.*
 
 ### Análisis y Resultados
