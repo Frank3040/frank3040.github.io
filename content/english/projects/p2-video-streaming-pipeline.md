@@ -1,4 +1,5 @@
 +++
+weight = 2
 title = "End-to-End ELT Pipeline for a Video Streaming Platform"
 date = 2025-10-10
 description = "This project implements an end-to-end ELT pipeline designed to analyze the performance of a video streaming platform using synthetic data."
