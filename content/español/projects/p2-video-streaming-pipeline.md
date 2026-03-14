@@ -1,6 +1,7 @@
 +++
+weight = 2
 title = "Desarrollo de un End-to-End ELT Pipeline para una Plataforma de Video Streaming"
-date = 2025-10-10
+date = 2025-12-10
 description = "Este proyecto es la implementación de un end-to-end ELT pipeline diseñado para analizar el rendimiento de una plataforma de video streaming utilizando datos sintéticos."
 tags = ["python", "data", "pipeline", "dbt", "airflow", "docker", "postgresql", "mongodb", "powerbi"]
 # externalLink = "https://github.com/..." # User can use this to link directly out

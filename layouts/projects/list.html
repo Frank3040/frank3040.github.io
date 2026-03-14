@@ -14,7 +14,7 @@
     {{ .Content }}
 
     <!-- Changed from simple <ul> to styled list -->
-    {{ $paginator := .Paginate .Pages 3 }}
+    {{ $paginator := .Paginate .Pages.ByWeight 3 }}
     <ul class="projects-list">
         {{ range $paginator.Pages }}
         <li class="project-item">

@@ -1,6 +1,7 @@
 +++
+weight = 3
 title = "Dashboard para análisis de ventas en tiendas de Estambul (Turquía)"
-date = 2025-08-08
+date = 2025-10-14
 description = "Este proyecto implementa un análisis descriptivo de un dataset que contiene información sobre transacciones de compras de 10 tiendas diferentes en Estambul, Turquía."
 tags = ["python", "power bi", "data", "visualization", "dashboard"]
 # externalLink = "https://github.com/..." # User can use this to link directly out

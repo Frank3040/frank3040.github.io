@@ -1,6 +1,6 @@
 +++
 title = "Desarrollo de un Pipeline y visualizaciónes para datos de ventas de un comercio de productos deportivos"
-date = 2025-11-15
+date = 2025-10-15
 description = "Este proyecto implementa un pipeline robusto de ETL (Extract, Load, Transform) para que se enfoca en la ingesta, carga y transformación de datos de ventas de un comercio de productos deportivos, además de la visualización de los datos en Power BI y Looker."
 tags = ["python", "data", "airflow", "docker", "postgresql", "dashboard"]
 # externalLink = "https://github.com/..." # User can use this to link directly out
