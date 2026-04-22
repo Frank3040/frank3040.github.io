@@ -1,5 +1,5 @@
 +++
-weight = 1
+weight = 2
 title = "Trupy AI: Chatbot para el departamento de psicología de la UPY"
 date = 2026-01-01
 description = "Este proyecto presenta el diseño e implementación de un chatbot para el Departamento de Psicología de la Universidad Politécnica de Yucatán (UPY)."

@@ -1,4 +1,5 @@
 +++
+weight = 3
 title = "End-to-End Pipeline para registros de niños desaparecidos"
 date = 2026-04-21
 description = "Pipeline de datos serverless en AWS y Snowflake que valida, transforma, modela y cataloga datos de desapariciones en Chiapas para analítica y BI."

@@ -1,5 +1,5 @@
 +++
-weight = 3
+weight = 1
 title = "Dashboard para análisis de ventas en tiendas de Estambul (Turquía)"
 date = 2025-10-14
 description = "Este proyecto implementa un análisis descriptivo de un dataset que contiene información sobre transacciones de compras de 10 tiendas diferentes en Estambul, Turquía."
