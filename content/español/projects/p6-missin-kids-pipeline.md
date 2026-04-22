@@ -1,68 +1,49 @@
 +++
-title = "Pipeline para análisis de desapariciones infantiles en Chiapas (México)"
-date = 2025-09-20
-description = "Este proyecto es la implementación de un pipeline ELT (Extract, Load and Transform) completo y un dashboard sencillo para analizar datos sobre desapariciones de niños, niñas y adolescentes en Chiapas, México. El sistema está contenerizado utilizando Docker y orquestado mediante Apache Airflow, con PostgreSQL como base de datos y Chart.js para la visualización."
-tags = ["python", "data", "airflow", "postgresql", "docker", "flask", "chart.js"]
-# externalLink = "https://github.com/..." # User can use this to link directly out
+title = "End-to-End Pipeline para registros de niños desaparecidos"
+date = 2026-04-21
+description = "Pipeline de datos serverless en AWS y Snowflake que valida, transforma, modela y cataloga datos de desapariciones en Chiapas para analítica y BI."
+tags = ["AWS", "Snowflake", "dbt", "Terraform", "Serverless", "Data Pipeline", "Python", "Athena", "Step Functions", "S3", "Lambda", "Glue"]
 +++
 
 ## Contenido
-- [Resumen del Proyecto](#resumen-del-proyecto)
-- [Contexto del Dataset](#contexto-del-dataset)
-- [Arquitectura del Proyecto](#arquitectura-del-proyecto)
-- [Dashboard](#dashboard)
+- [Objetivo del Proyecto](#objetivo-del-proyecto)
+- [Descripción del Conjunto de Datos](#descripción-del-conjunto-de-datos)
+- [Metodología/Procesos](#metodologíaprocesos)
+- [Resultados](#resultados)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 
-## Resumen del Proyecto
+## Objetivo del Proyecto
+Desarrollo de un Pipeline serverless y orientado a eventos en AWS y Snowflake que ingesta archivos CSV sobre personas desaparecidas en Chiapas, México, valida la calidad de los datos, transforma los registros a Parquet particionado, carga los conjuntos curados en Snowflake y usa dbt para construir la capa analítica para su visualización en Power BI o QuickSight. Además, se usa Terraform para el aprovisionamiento y gestión de todos los recursos de AWS.
 
-Este proyecto implementa un pipeline ELT (Extract, Load and Transform) completo y un dashboard interactivo para analizar datos sobre desapariciones de niños, niñas y adolescentes en Chiapas, México. El sistema está contenerizado utilizando Docker y orquestado mediante Apache Airflow, con PostgreSQL como base de datos y Flask para la visualización.
+![Diagrama de arquitectura](/project_images/p6-missing-kids/p6-1.png)
+*Figura 1. Arquitectura serverless y flujo de datos.*
 
-##### **El codigo de este proyecto se puede encontrar en Github, da click en el siguiente enlace: [GitHub](https://github.com/Frank3040/pipeline-desapariciones-chiapas.git)**
+### *Puedes encontrar el código de este proyecto en [GitHub](https://github.com/Frank3040/aws-missing-kids-pipeline).*
 
-## Contexto del Dataset
+## Descripción del Conjunto de Datos
+El conjunto de datos fuente es un CSV (por ejemplo, `base-desapariciones-dataton-2025.csv`) con registros de niñas y niños desaparecidos en Chiapas entre 2019 y 2025. Incluye campos como sexo, edad, grupo etario, municipio, región, colonia/localidad, condición migrante, fecha de desaparición, día de la semana, horario, estatus del caso y días sin localizar.
 
-El dataset proviene de la plataforma [datamx](https://datamx.io/about). Especificamente, el dataset usado es [DESAPARICIÓN DE NIÑAS, NIÑOS Y ADOLESCENTES EN CHIAPAS 2019-2025](https://datamx.io/dataset/desaparicion-de-ninas-ninos-y-adolescentes-en-chiapas-2019-2025).
+## Flujo del Pipeline
+1. Los CSV se cargan a `raw/` en un bucket de S3.
+2. EventBridge activa un tópico SNS que publica hacia SQS.
+3. Un Lambda inicial dispara un flujo en AWS Step Functions.
+4. El Lambda validador revisa columnas requeridas y un umbral de calidad (>70% filas válidas).
+5. El Lambda transformador limpia campos (fechas, edades, horarios, división de ubicación) y escribe Parquet particionado (`year=YYYY`) en el bucket procesado.
+6. Un cargador de Snowflake ingesta los archivos parquet procesados en Snowflake para analítica posterior.
+7. dbt modela y prueba la capa analítica sobre Snowflake para generar marts listos para BI.
+8. Glue Crawler actualiza el catálogo para consultas en Athena, y los fallos se envían a un DLQ y generan alertas con CloudWatch/SNS.
 
-### Relevancia Social
-Este dataset es de crítica importancia social y humanitaria. La desaparición de menores es una crisis que afecta profundamente el tejido social, la seguridad y los derechos humanos fundamentales. Contar con datos estructurados y accesibles es el primer paso para visibilizar la magnitud del problema y movilizar recursos de manera efectiva.
+## Resultados
+Los datos procesados se consultan en Athena y Snowflake, y se conectan a Power BI o QuickSight para construir tableros que muestran tendencias por municipio, grupo etario, periodo y estatus del caso. dbt aporta el modelado dimensional y la consistencia de la capa analítica.
 
-### Problema a Resolver
-El análisis de estos datos permite abordar la falta de información centralizada y procesable. Al identificar patrones, como los municipios con mayor incidencia, los grupos etarios más vulnerables o las tendencias temporales, se pueden diseñar estrategias de prevención más efectivas y optimizar los esfuerzos de búsqueda y localización.
-
-
-## Arquitectura del Proyecto
-
-![Arquitectura del proyecto](/project_images/p6-missing-kids/p6-1.jpg)
-
-El proyecto utiliza una arquitectura moderna basada en contenedores:
-
-1.  **Orquestación (Apache Airflow):** Gestiona el flujo de trabajo ETL.
-    *   **Sensor:** Detecta la llegada de nuevos archivos de datos.
-    *   **Preparación**: Prepara los datos para ser cargados. Pequeña transformación.
-    *   **Carga:** Ingesta datos crudos CSV a PostgreSQL (`schema: raw`).
-    *   **Transformación:** Limpieza y normalización de datos mediante SQL (`schema: processed`).
-    *   **Modelado:** Creación de vistas analíticas (`schema: trusted`).
-    *   **Permisos:** Gestión automática de roles de base de datos para seguridad.
-2.  **Almacenamiento (PostgreSQL):** Base de datos relacional con esquema en capas (Raw -> Processed -> Trusted).
-3.  **Visualización (Flask + Chart.js):** Dashboard web que consume las vistas confiables para mostrar KPIs y gráficos en tiempo real.
-4.  **Infraestructura (Docker):** Todo el entorno se despliega mediante `docker-compose`.
-
-## Dashboard
-
-Debajo se muestra el dashboard resultante. Un dashboard sencillo que muestra KPIs relevantes y gráficos para explorar los datos.
-
-![Dashboard Parte 1](/project_images/p6-missing-kids/p6-2.png)
-![Dashboard Parte 2](/project_images/p6-missing-kids/p6-3.png)
-
-Entre las principales conclusiones se encuentran:
+![Mockup de dashboard](/project_images/p6-missing-kids/p6-2.png)
+*Figura 2. Ejemplo de Dashboard en Power BI.*
 
 ## Tecnologías Utilizadas
-
-*   Python
-*   Apache Airflow
-*   PostgreSQL
-*   Flask
-*   Chart.js
-*   Docker
-
-
+- AWS S3, EventBridge, SNS, SQS
+- AWS Lambda, Step Functions
+- AWS Glue, Athena
+- Snowflake, dbt
+- Terraform
+- Python, pandas, awswrangler
+- Power BI

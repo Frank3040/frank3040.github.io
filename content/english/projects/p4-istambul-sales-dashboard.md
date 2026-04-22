@@ -1,5 +1,5 @@
 +++
-weight = 3
+weight = 1
 title = "Sales Analytics Dashboard: Istanbul Shopping Malls"
 date = 2025-08-08
 description = "This project implements a descriptive analysis of a dataset that contains information about shopping transactions from 10 distinct shopping malls in Istanbul from 2021 to 2023"

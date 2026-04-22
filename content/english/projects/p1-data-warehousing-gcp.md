@@ -40,7 +40,7 @@ The Data Warehouse was designed following the **star schema** approach to ensure
 
 This model enables multi-dimensional analysis by time, location, payment type, and vendor, providing valuable insights into urban transportation behavior.
 
-![Star schema representation showing fact and dimension relationships.](/project_images/pj-2-gcp-dw.png)
+![Star schema representation showing fact and dimension relationships.](/project_images/p1-gcp-bigquery/p1-1.png)
 
 *Figure 1. Star schema representation showing fact and dimension relationships.*
 
@@ -63,7 +63,7 @@ Using **Looker Studio** connected to **BigQuery**, an interactive dashboard was 
 
 Below is a screenshot of the dashboard, so you can get an idea of the data and visualizations that it contains.
 
-![Dashboard screenshot](/project_images/ny-dashboard.png)
+![Dashboard screenshot](/project_images/p1-gcp-bigquery/p1-2.png)
 *Figure 2. Dashboard screenshot.*
 
 
