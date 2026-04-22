@@ -1,5 +1,4 @@
 +++
-weight = 2
 title = "Desarrollo de un End-to-End ELT Pipeline para una Plataforma de Video Streaming"
 date = 2025-12-10
 description = "Este proyecto es la implementación de un end-to-end ELT pipeline diseñado para analizar el rendimiento de una plataforma de video streaming utilizando datos sintéticos."
