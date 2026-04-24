@@ -7,13 +7,13 @@ tags = ["python", "data", "pipeline", "dbt", "airflow", "docker", "postgresql", 
 +++
 
 ## Table of Contents
-- [Arquitectura del Sistema](#system-architecture)
-- [Descripción del Proyecto](#project-overview)
-- [Fuentes de Datos](#data-sources)
-- [Estrategia de Modelado y Almacenamiento de Datos](#data-modeling-and-storage-strategy)
-- [ELT Pipeline y Orquestación](#elt-pipeline-and-orchestration)
-- [Dashboard Analítico](#analytics-dashboard)
-- [Herramientas y Tecnologías](#tools-and-technologies)
+- [Arquitectura del Sistema](#arquitectura-del-sistema)
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Fuentes de Datos](#fuentes-de-datos)
+- [Estrategia de Modelado y Almacenamiento de Datos](#estrategia-de-modelado-y-almacenamiento-de-datos)
+- [ELT Pipeline y Orquestación](#elt-pipeline-y-orquestación)
+- [Dashboard Analítico](#dashboard-analítico)
+- [Herramientas y Tecnologías](#herramientas-y-tecnologías)
 
 ## Arquitectura del Sistema
 
