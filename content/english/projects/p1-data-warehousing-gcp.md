@@ -10,9 +10,10 @@ tags = ["Data", "Pipeline", "GCP", "BigQuery", "Data Warehousing"]
 # Table of Contents
  - [Project Overview](#project-overview)
  - [Dataset Description](#dataset-description)
- - [ELT Process](#elt-process)
  - [Dimensional Modeling](#dimensional-modeling)
- - [Analysis and Results](#analysis-and-results)
+ - [ELT Process](#elt-process)
+ - [Dimension and Fact Tables in BigQuery](#dimension-and-fact-tables-in-bigquery)
+ - [Final Dashboard](#final-dashboard)
  - [Technologies Used](#technologies-used)
 
 
