@@ -10,8 +10,9 @@ tags = ["Data", "Pipeline", "GCP", "BigQuery", "Data Warehousing", "Looker Studi
 # Contenido
  - [Objetivo del Proyecto](#objetivo-del-proyecto)
  - [Descripción del Conjunto de Datos](#descripción-del-conjunto-de-datos)
+ - [Modelado Dimensional](#modelado-dimensional) 
  - [Proceso ELT](#proceso-elt)
- - [Modelado Dimensional](#modelado-dimensional)
+ - [Tablas de dimensiones y hechos en BigQuery](#tablas-de-dimensiones-y-hechos-en-bigquery)
  - [Dashboard](#dashboard)
  - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 
