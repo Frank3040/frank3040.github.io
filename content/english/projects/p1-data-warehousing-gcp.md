@@ -57,14 +57,22 @@ For this project the Extract, Load, and Transform (ELT) pattern was used. It con
 3. **Transformation**  
    Data is then moved to a **processed** schema where it is cleaned, data types are normalized, and derived attributes are created. Subsequently, data is loaded into a **trusted** schema in the fact and dimension tables. Finally, materialized views are created to provide fast access to the data as it contains millions of records.
 
-## Analysis and Results
+
+### Dimension and Fact Tables in BigQuery
+
+![Bigquery data warehouse schema](/project_images/p1-gcp-bigquery/p1-3.png)
+
+*Figure 2. Shows the BigQuery tables that make up the data warehouse.*
+
+
+## Final Dashboard
 
 Using **Looker Studio** connected to **BigQuery**, an interactive dashboard was developed to analyze operational and mobility patterns of NYC taxi services. The visualizations that it contains support insights into trip volumes, revenue distribution, temporal trends, and geographic demand, demonstrating the analytical value of the Data Warehouse design. You can access the dashboard [here](https://lookerstudio.google.com/reporting/ac9e3cf1-d247-479a-a1a0-eee83c33d6b9). 
 
 Below is a screenshot of the dashboard, so you can get an idea of the data and visualizations that it contains.
 
 ![Dashboard screenshot](/project_images/p1-gcp-bigquery/p1-2.png)
-*Figure 2. Dashboard screenshot.*
+*Figure 3. Dashboard screenshot.*
 
 
 ### Technologies Used

@@ -57,6 +57,14 @@ Para este proyecto se utilizó el patrón Extraer, Cargar y Transformar, ELT por
 3. **Transformación**  
    Los datos se mueven a un esquema **processed** donde se limpian, se normalizan los tipos de datos y se crean atributos derivados. Luego, los datos se cargan en un esquema **trusted** en las tablas de hechos y dimensiones. Finalmente, se crean vistas materializadas para proporcionar acceso rápido a los datos.
 
+
+### Tablas de dimensiones y hechos en BigQuery
+
+![Bigquery data warehouse schema](/project_images/p1-gcp-bigquery/p1-3.png)
+
+*Figura 2. Se muestra las tablas de BigQuery que componen el data warehouse.*
+
+
 ## Dashboard
 
 Usando **Looker Studio** conectado a **BigQuery**, se desarrolló un dashboard interactivo para analizar los patrones operativos y de movilidad de los servicios de taxi de NYC. Las visualizaciones que contiene respaldan información sobre volúmenes de viajes, distribución de ingresos, tendencias temporales y demanda geográfica, demostrando el valor analítico del diseño del Data Warehouse. Puedes acceder al dashboard [aquí](https://lookerstudio.google.com/reporting/ac9e3cf1-d247-479a-a1a0-eee83c33d6b9). 
@@ -64,7 +72,7 @@ Usando **Looker Studio** conectado a **BigQuery**, se desarrolló un dashboard i
 Debajo hay una captura de pantalla del dashboard, para que te puedas dar una idea de las gráficas que contiene.
 
 ![Dashboard screenshot](/project_images/p1-gcp-bigquery/p1-2.png)
-*Figura 2. Dashboard interactivo para analizar los patrones operativos y de movilidad de los servicios de taxi de NYC.*
+*Figura 3. Dashboard interactivo para analizar los patrones operativos y de movilidad de los servicios de taxi de NYC.*
 
 ### Análisis y Resultados
 
