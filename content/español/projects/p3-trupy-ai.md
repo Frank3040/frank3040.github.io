@@ -4,8 +4,14 @@ title = "Trupy AI: Chatbot para el departamento de psicología de la UPY"
 date = 2026-01-01
 description = "Este proyecto presenta el diseño e implementación de un chatbot para el Departamento de Psicología de la Universidad Politécnica de Yucatán (UPY)."
 tags = ["python", "data", "docker", "chatbot", "vue", "ai", "openai", "fastapi"]
-# externalLink = "https://github.com/Frank3040/Trupy-AI.git"
 +++
+
+## Contenido
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Arquitectura del Sistema](#arquitectura-del-sistema)
+- [Demo](#demo)
+- [Próximos Pasos](#próximos-pasos)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
 
 ## Descripción del Proyecto
 

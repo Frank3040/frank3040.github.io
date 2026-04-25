@@ -1,5 +1,5 @@
 # Hugo default output directory
 public/
 .github/agents/
-readme_files/
+files_for_agent/
 

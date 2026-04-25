@@ -9,7 +9,7 @@ tags = ["AWS", "Snowflake", "dbt", "Terraform", "Serverless", "Data Pipeline", "
 ## Contenido
 - [Objetivo del Proyecto](#objetivo-del-proyecto)
 - [Descripción del Conjunto de Datos](#descripción-del-conjunto-de-datos)
-- [Metodología/Procesos](#metodologíaprocesos)
+- [Flujo del Pipeline](#flujo-del-pipeline)
 - [Resultados](#resultados)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 

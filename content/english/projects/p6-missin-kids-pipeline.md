@@ -9,7 +9,7 @@ tags = ["AWS", "Snowflake", "dbt", "Terraform", "Serverless", "Data Pipeline", "
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset Description](#dataset-description)
-- [Methodology/Process](#methodologyprocess)
+- [Pipeline Flow](#pipeline-flow)
 - [Dashboard/Results](#dashboardresults)
 - [Technologies Used](#technologies-used)
 
