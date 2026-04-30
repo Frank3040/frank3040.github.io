@@ -6,11 +6,13 @@ aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
 +++
 
-Francisco Chan Pech is a Data Engineering student at the Universidad Politécnica de Yucatán, with hands-on experience in the design, automation, and implementation of data pipelines, RPA solutions, and data warehouses for analytical and decision-making purposes. He has worked remotely as a Data Engineer at XPERT-IA, where he designed and implemented RPA automation bots for data extraction from CRM systems using GUI control in Python, incorporating robust error-handling, validation, and data-cleaning processes.
+Francisco Chan Pech is a Data Engineer specializing in the design, automation, and implementation of robust data pipelines, AI-driven applications, and data warehouses for analytical and decision-making purposes. 
 
-Previously, he collaborated with UNAM ENES Mérida, developing automated data ingestion tools for oceanographic forecasts from the HYCOM (HYbrid Coordinate Ocean Model) server, migrating and refactoring legacy download workflows to improve standardization and maintainability for research use. He also contributed to the design of ELT pipelines and data visualizations for the analysis of meteorological variables, achieving a significant reduction in manual workload through end-to-end automation.
+Currently, he serves as an AI Operations Engineer at the Universidad Politécnica de Yucatán, where he developed and deployed an institutional chatbot utilizing a serverless RAG (Retrieval-Augmented Generation) architecture. In this role, he leads the evaluation of the AI system's accuracy, manages data ingestion and validation strategies, and implements secure session persistence using Redis and Microsoft Entra ID.
 
-He has developed end-to-end projects including a Data Warehouse on GCP using BigQuery and Looker Studio to analyze urban mobility patterns in New York City, as well as a complete ELT pipeline for a video streaming platform built with Python, SQL, Docker, Airflow, dbt, MongoDB, PostgreSQL, and Power BI. He has complemented his academic training with Data Engineering certifications in Python and SQL from DataCamp, and holds an upper-intermediate (B2) level of English proficiency.
+Previously, as a Senior Data Engineer at XPERT-IA, he designed and implemented automated RPA bots to extract and process over 1 TB of CRM data. He also architected serverless ETL pipelines on AWS and developed high-performance REST APIs with FastAPI to facilitate secure data consumption.
+
+He has developed end-to-end projects including a Data Warehouse on GCP using BigQuery and Looker Studio to analyze urban mobility patterns in New York City, a serverless AWS and Snowflake data pipeline to model missing-persons data, and a complete ELT pipeline for a video streaming platform. He has complemented his background with Data Engineering certifications in Python and SQL from DataCamp, and holds an upper-intermediate (B2) level of English proficiency.
 
 You can reach me at:
 
